@@ -1,0 +1,48 @@
+
+  .cardSkeleton{
+    width: 49%;
+  }
+.cardSkeleton:not(:first-child:nth-child(2)){
+    margin-top: 50px;
+  }
+  .cardSkeleton .userName  .avatarContainer::before,.cardSkeleton .userName .name::before,.cardSkeleton .title::before,.cardSkeleton .body p::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: hsl(200,20%,70%);
+    animation: animationSkeleton 1s linear infinite alternate;
+  }
+  @keyframes animationSkeleton {
+        0%{
+          background-color: hsl(200,20%,70%);
+  
+        }
+       100%{
+        background-color: hsl(200,20%,95%);
+        }
+    
+  }
+  .cardSkeleton .userName .name{
+    position: relative;
+    width: 30%;
+    
+  }
+  
+  .cardSkeleton .title{
+    position: relative;
+    height: 30px;
+    width: 100%;
+  }
+  .cardSkeleton .body{
+    margin-top: 20px;
+  }
+  .cardSkeleton .body p{
+    position: relative;
+    height: 15px;
+    margin-top: 2px;
+    width: 100%;
+  }
+  .cardSkeleton .body p:last-child{
+    width: 60%;
+  }
